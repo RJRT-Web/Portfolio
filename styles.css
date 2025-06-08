@@ -120,7 +120,7 @@ footer {
   opacity: 0; /* Hidden by default */
 }
 
-#back-to-top:hover {
+s #back-to-top:hover {
   background: #f8b400;
   box-shadow: 0 0 15px #f8b400;
 }
