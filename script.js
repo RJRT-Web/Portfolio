@@ -4,47 +4,46 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   const toggleButton = document.createElement("button");
-  toggleButton.textContent = "Toggle Dark Mode";
+  toggleButton.textContent = "Dark Mode"; // Default text
   toggleButton.classList.add("toggle-btn");
   document.body.appendChild(toggleButton);
 
   toggleButton.addEventListener("click", function () {
     document.body.classList.toggle("dark-mode");
+
+    // Change button text based on mode
+    if (document.body.classList.contains("dark-mode")) {
+      toggleButton.textContent = "White Mode";
+    } else {
+      toggleButton.textContent = "Dark Mode";
+    }
+
+    //Store user preference
     localStorage.setItem(
       "darkMode",
       document.body.classList.contains("dark-mode")
     );
   });
 
-  if (localStorage.getItem("darkMode") === "true") {
+  // Maintain user preference after refresh
+  /* if (localStorage.getItem("darkMode") === "true") {
     document.body.classList.add("dark-mode");
-  }
+    toggleButton.textContent = "Dark Mode";
+  }*/
 });
 
-document.addEventListener("scroll", function () {
-  document.querySelectorAll("section").forEach((section) => {
-    const rect = section.getBoundingClientRect();
-    if (rect.top < window.innerHeight) {
-      section.style.opacity = 1;
+document.addEventListener("DOMContentLoaded", () => {
+  const backToTopButton = document.getElementById("back-to-top");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      backToTopButton.style.opacity = "1"; // Show when scrolling down
+    } else {
+      backToTopButton.style.opacity = "0"; // Hide when near the top
     }
   });
-});
 
-let lastScrollY = window.scrollY;
-const header = document.querySelector("header");
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > lastScrollY) {
-    header.classList.add("header-hidden"); // Hide when scrolling down
-  } else {
-    header.classList.remove("header-hidden"); // Show when scrolling up
-  }
-  lastScrollY = window.scrollY;
-});
-
-const navButton = document.querySelector(".nav-toggle");
-const mobileNav = document.querySelector(".mobile-nav");
-
-navButton.addEventListener("click", () => {
-  mobileNav.classList.toggle("open");
+  backToTopButton.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" }); // Scrolls smoothly to the top
+  });
 });
