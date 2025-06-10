@@ -1,21 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta name="description" content="Portfolio Ronald Junior Rivest-Trudel" />
-    <meta
-      name="keyword"
-      content="HTML,CSS,JavaScript,React,Responsive Design,CMS"
-    />
-    <meta name="author" content="Ronald Junior Rivest-Trudel" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ronald Junior Rivest-Trudel Portfolio</title>
+    <title>Ronald - Web Developer & Integrator</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
-      <h1>Ronald's Portfolio</h1>
-      <nav>
+      <h1>RJRT</h1>
+      <button class="menu-toggle">☰</button>
+      <nav class="nav-menu">
         <ul>
           <li><a href="#about">About Me</a></li>
           <li><a href="#skills">Skills</a></li>
@@ -25,41 +20,56 @@
       </nav>
     </header>
 
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        I'm a web developer and integrator with experience in building and
-        optimizing websites for seamless functionality.
-      </p>
-    </section>
+    <div class="content">
+      <section class="intro">
+        <h2>Ronald Junior Rivest-Trudel</h2>
+        <p>
+          Experienced web developer & integrator specializing in front-end and
+          CMS integration.
+        </p>
+      </section>
+      <section id="about" class="about">
+        <h2>About Me</h2>
+        <img
+          src="images/profile2.jpg"
+          alt="Profile Picture"
+          class="profile-pic"
+        />
+        <p>
+          Experienced web developer & integrator specializing in front-end and
+          CMS integration.
+        </p>
+      </section>
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <ul>
-        <li>HTML, CSS, JavaScript</li>
-        <li>React, Vue.js</li>
-        <li>CMS Integration (WordPress, Shopify, Drupal)</li>
-        <li>API & Database Integration</li>
-        <li>Performance Optimization</li>
-      </ul>
-    </section>
+      <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <ul>
+          <li>HTML, CSS, JavaScript</li>
+          <li>React, Vue.js</li>
+          <li>API & CMS Integration (WordPress, Shopify)</li>
+        </ul>
+      </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="project">
-        <h3>Project 1: E-commerce Integration</h3>
-        <p>Implemented a Shopify store with API connections.</p>
-      </div>
-      <div class="project">
-        <h3>Project 2: Custom Web Application</h3>
-        <p>Developed a dynamic web app using React and Node.js.</p>
-      </div>
-    </section>
-    <button id="back-to-top">⬆ Top</button>
+      <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="project">
+          <img src="images/project1.jpg" alt="Project 1" class="project-img" />
+          <h3>E-commerce Integration</h3>
+          <p>Implemented a Shopify store with API connections.</p>
+        </div>
+        <div class="project">
+          <img src="images/project2.jpg" alt="Project 2" class="project-img" />
+          <h3>Web App Development</h3>
+          <p>Built a dynamic web app using React and Node.js.</p>
+        </div>
+      </section>
+    </div>
+
     <footer id="contact">
       <h2>Contact</h2>
       <p>Email: ronaldjunior.rivesttrudel@hotmail.com</p>
       <p>© Copyright 2025 Ronald Junior Rivest-Trudel</p>
+      <button id="back-to-top">⬆ Back to Top</button>
     </footer>
 
     <script src="script.js"></script>
