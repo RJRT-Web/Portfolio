@@ -8,59 +8,121 @@
   </head>
   <body>
     <header>
-      <h1>RJRT</h1>
+      <div><a class="logo" href="#intro">RJRT</a></div>
       <button class="menu-toggle">☰</button>
       <nav class="nav-menu">
-        <ul>
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
+        <ul class="popup-menu">
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#skills">Compétence</a></li>
+          <li><a href="#projects">Projets</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
-
+    <section id="intro" class="intro">
+      <h1>Ronald Junior Rivest-Trudel</h1>
+      <p>Experience développeur web & intégrateur</p>
+      <p>Spécialisé en front-end et CMS integration</p>
+    </section>
     <div class="content">
-      <section class="intro">
-        <h2>Ronald Junior Rivest-Trudel</h2>
-        <p>
-          Experienced web developer & integrator specializing in front-end and
-          CMS integration.
-        </p>
-      </section>
-      <section id="about" class="about">
+      <section id="about">
         <h2>About Me</h2>
-        <img
-          src="images/profile2.jpg"
-          alt="Profile Picture"
-          class="profile-pic"
-        />
-        <p>
-          Experienced web developer & integrator specializing in front-end and
-          CMS integration.
-        </p>
+        <div class="content-image">
+          <img
+            src="images/profile2.jpg"
+            alt="Profile Picture"
+            class="profile-pic"
+          />
+          <div class="content-text">
+            <p>
+              Bienvenue dans mon univers numérique! Passionné par le web et son
+              potentiel infini, je suis un intégrateur web spécialisé dans la
+              création d'expériences digitales modernes et accessibles. Grâce à
+              ma formation en développement/design web et créativité pour donner
+              vie à des interfaces intuitives et engageantes. Mon objectif est
+              de concevoir des sites performants, esthétiques et adaptés aux
+              besoins des utilisateurs. N’hésite pas à me contacter pour
+              échanger sur de futurs projets !
+            </p>
+          </div>
+        </div>
       </section>
 
       <section id="skills" class="skills">
-        <h2>Skills</h2>
-        <ul>
-          <li>HTML, CSS, JavaScript</li>
-          <li>React, Vue.js</li>
-          <li>API & CMS Integration (WordPress, Shopify)</li>
-        </ul>
+        <h2>Compétences</h2>
+        <div class="skill-center">
+          <ul>
+            <li>
+              <strong>Langages & Frameworks:</strong> HTML, CSS, JavaScript,
+              React
+            </li>
+            <li>
+              <strong> Intégration CMS & E-commerce:</strong>WordPress,
+              Optimizely
+            </li>
+            <li>
+              <strong> Responsive Design & UI/UX:</strong> Accessibilité,
+              animations CSS, interactions modernes
+            </li>
+            <li>
+              <strong> Outils & Plateformes:</strong> GitHub, Photoshop,
+              Illustrator, Figma, Digizuite, Eloqua, Browser Stack, Confluence
+            </li>
+          </ul>
+        </div>
       </section>
 
-      <section id="projects" class="projects">
-        <h2>Projects</h2>
-        <div class="project">
-          <img src="images/project1.jpg" alt="Project 1" class="project-img" />
-          <h3>E-commerce Integration</h3>
-          <p>Implemented a Shopify store with API connections.</p>
+      <section id="projects">
+        <h2>Projets</h2>
+        <div class="content-image">
+          <img src="images/rpg-game.png" alt="Project 1" class="project-img" />
+          <div class="content-text">
+            <h3>RPG Game</h3>
+            <p>Projet de formation</p>
+            <p>(HTML/CSS/Javascript)</p>
+            <a
+              class="project-link"
+              href="https://rjrt-web.github.io/rpg-combat/"
+              target="_blank"
+              >Link</a
+            >
+          </div>
         </div>
-        <div class="project">
-          <img src="images/project2.jpg" alt="Project 2" class="project-img" />
-          <h3>Web App Development</h3>
-          <p>Built a dynamic web app using React and Node.js.</p>
+        <div class="content-image">
+          <img
+            src="images/dave-burger.jpeg"
+            alt="Project 2"
+            class="project-img"
+          />
+          <div class="content-text">
+            <h3>Dave's Burger</h3>
+            <p>Projet de formation</p>
+            <p>(HTML/CSS seulement)</p>
+            <a
+              class="project-link"
+              href="https://rjrt-web.github.io/burger/"
+              target="_blank"
+              >Link</a
+            >
+          </div>
+        </div>
+        <div class="content-image">
+          <img
+            src="images/headlines.jpeg"
+            alt="Project 2"
+            class="project-img"
+          />
+          <div class="content-text">
+            <h3>Headlines</h3>
+            <p>Projet de formation</p>
+            <p>(HTML/CSS seulement)</p>
+            <a
+              class="project-link"
+              href="https://rjrt-web.github.io/headlines/"
+              target="_blank"
+              >Link</a
+            >
+          </div>
         </div>
       </section>
     </div>
@@ -69,7 +131,7 @@
       <h2>Contact</h2>
       <p>Email: ronaldjunior.rivesttrudel@hotmail.com</p>
       <p>© Copyright 2025 Ronald Junior Rivest-Trudel</p>
-      <button id="back-to-top">⬆ Back to Top</button>
+      <button id="back-to-top">⬆ Top</button>
     </footer>
 
     <script src="script.js"></script>

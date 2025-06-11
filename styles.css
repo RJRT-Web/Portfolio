@@ -8,12 +8,16 @@ body {
   color: #333;
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 
 /* Header */
 header {
+  position: fixed;
+  top: 0; /* Keeps it at the top */
+  left: 0; /* Aligns it to the left */
   text-align: center;
-  padding: 20px;
+  padding: 20px 0px;
   background: #333;
   color: white;
   width: 100%;
@@ -22,20 +26,41 @@ header {
   align-items: center;
 }
 
+h1 {
+  font-size: 40px;
+}
+
+.logo {
+  font-size: 40px;
+  color: white;
+  text-decoration: none;
+}
+
+.logo:hover {
+  color: rgb(143, 0, 0); /* Change text color on hover */
+  transition: color 0.3s ease-in-out;
+}
+
 nav ul {
   list-style: none;
-  padding: 0;
+  padding: 0px;
   display: flex;
   justify-content: right;
 }
 
 nav ul li {
-  margin: 0 15px;
+  margin: 0px 15px;
 }
 
 nav ul li a {
   color: white;
   text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: rgb(143, 0, 0); /* Change text color on hover */
+  text-decoration: underline; /* Add underline effect */
 }
 
 /* Mobile Navigation */
@@ -65,7 +90,7 @@ nav ul li a {
     background: #333;
     padding: 10px;
     position: absolute;
-    top: 100px;
+    top: 70px;
     left: 0;
     width: 100%;
   }
@@ -75,32 +100,87 @@ nav ul li a {
   }
 
   nav ul li {
-    margin: 0px;
+    margin-bottom: 15px;
   }
 
   .nav-menu.show {
     display: flex;
   }
+
+  .about {
+    flex-direction: column;
+  }
 }
+
 .intro {
-  align-content: center;
+  background: url("images/background.jpg") no-repeat center/cover,
+    rgba(143, 0, 0, 0.7);
+  background-blend-mode: overlay;
   background-attachment: fixed;
-  background-color: rgb(146, 0, 0);
-  background-image: url(https://rjrt-web.github.io/Portfolio/images/background.jpg);
   background-position-x: 50%;
   background-position-y: 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
   color: rgb(255, 255, 255);
-  display: flex;
   font-size: 16px;
+  text-align: center;
+  width: 100%;
+  height: 700px;
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .intro {
+    height: 500px;
+  }
 }
 
 /* Content Layout using Flexbox */
 .content {
-  display: flex;
-  flex-direction: column;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); /* 12 equal columns */
   align-items: center;
+}
+
+section {
+  padding-top: 90px;
+  grid-column: 3 / span 8; /* Starts at column 3, spans 8 columns */
+  width: 100%;
+}
+
+.skill-center {
+  display: flex;
+  justify-content: center;
+}
+
+.skill-center ul {
+  width: 80%;
+  list-style: none;
+}
+
+.skill-center ul li {
+  margin-bottom: 20px;
+}
+
+.content-image {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .content-image {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.content-text {
+  width: 60%;
+  text-align: center;
+  padding: 24px 12px;
 }
 
 /* Profile Picture */
@@ -122,31 +202,36 @@ nav ul li a {
   margin: 10px auto;
 }
 
+.project-link {
+  display: inline-block;
+  background-color: rgb(143, 0, 0);
+  color: white;
+  padding: 15px 25px;
+  border-radius: 15px;
+  text-decoration: none;
+  margin-bottom: 24px;
+  transition: color 0.3s ease-in-out;
+}
+
+.project-link:hover {
+  background-color: #333;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .project-link {
+    display: block;
+  }
+}
+
 /* Footer */
 footer {
   background: #333;
   color: white;
   text-align: center;
-  padding: 20px;
+  margin-top: 90px;
+  padding: 20px 0px;
   width: 100%;
-}
-
-/* Back to Top Button */
-#back-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  padding: 10px 15px;
-  background: #00ffee;
-  color: #000;
-  border: none;
-  font-size: 16px;
-  cursor: pointer;
-  opacity: 0;
-}
-
-#back-to-top:hover {
-  background: #f8b400;
 }
 
 /* Back to Top Button Animation */
@@ -166,7 +251,7 @@ footer {
   bottom: 20px;
   right: 20px;
   padding: 10px 15px;
-  background: #00ffee;
+  background: white;
   color: #000;
   border: none;
   font-size: 16px;
@@ -176,5 +261,7 @@ footer {
 }
 
 #back-to-top:hover {
-  background: #f8b400;
+  background: rgb(143, 0, 0);
+  color: white;
+  transition: color 0.3s ease-in-out;
 }
