@@ -1,10 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ronald - Web Developer & Integrator</title>
+    <meta name="author" content="Ronald Junior Rivest-Trudel" />
+    <meta
+      name="description"
+      content="Portfolio de Ronald Junior Riest-Trudel"
+    />
+    <title>RJRT - Intégrateur - Développeur web</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.jpg" />
     <link rel="stylesheet" href="styles.css" />
+
+    <!-- Open Graph pour Facebook -->
+    <meta property="og:title" content="Ronald | Développeur Web & Designer" />
+    <meta
+      property="og:description"
+      content="Découvrez le portfolio de Ronald, avec ses projets de développement web et de design."
+    />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:title" content="Ronald | Développeur Web & Designer" />
+    <meta
+      name="twitter:description"
+      content="Découvrez le portfolio de Ronald, avec ses projets de développement web et de design."
+    />
+    <script
+      src="https://kit.fontawesome.com/a4006e8ade.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
@@ -21,8 +45,7 @@
     </header>
     <section id="intro" class="intro">
       <h1>Ronald Junior Rivest-Trudel</h1>
-      <p>Experience développeur web & intégrateur</p>
-      <p>Spécialisé en front-end et CMS integration</p>
+      <p>Intégrateur - Développeur web</p>
     </section>
     <div class="content">
       <section id="about">
@@ -53,19 +76,19 @@
         <div class="skill-center">
           <ul>
             <li>
-              <strong>Langages & Frameworks:</strong> HTML, CSS, JavaScript,
+              <strong>Langages &amp; Frameworks:</strong> HTML, CSS, JavaScript,
               React
             </li>
             <li>
-              <strong> Intégration CMS & E-commerce:</strong>WordPress,
+              <strong> Intégration CMS &amp; E-commerce:</strong>WordPress,
               Optimizely
             </li>
             <li>
-              <strong> Responsive Design & UI/UX:</strong> Accessibilité,
+              <strong> Responsive Design &amp; UI/UX:</strong> Accessibilité,
               animations CSS, interactions modernes
             </li>
             <li>
-              <strong> Outils & Plateformes:</strong> GitHub, Photoshop,
+              <strong> Outils &amp; Plateformes:</strong> GitHub, Photoshop,
               Illustrator, Figma, Digizuite, Eloqua, Browser Stack, Confluence
             </li>
           </ul>
@@ -75,7 +98,25 @@
       <section id="projects">
         <h2>Projets</h2>
         <div class="content-image">
-          <img src="images/rpg-game.png" alt="Project 1" class="project-img" />
+          <img
+            src="images/movie-library.jpg"
+            alt="Movie Library"
+            class="project-img"
+          />
+          <div class="content-text">
+            <h3>Movie Library</h3>
+            <p>Projet de formation</p>
+            <p>(React)</p>
+            <a
+              class="project-link"
+              href="https://movie-library-orcin.vercel.app/"
+              target="_blank"
+              >Lien</a
+            >
+          </div>
+        </div>
+        <div class="content-image">
+          <img src="images/rpg-game.png" alt="RPG Game" class="project-img" />
           <div class="content-text">
             <h3>RPG Game</h3>
             <p>Projet de formation</p>
@@ -84,14 +125,14 @@
               class="project-link"
               href="https://rjrt-web.github.io/rpg-combat/"
               target="_blank"
-              >Link</a
+              >Lien</a
             >
           </div>
         </div>
         <div class="content-image">
           <img
             src="images/dave-burger.jpeg"
-            alt="Project 2"
+            alt="Dave Burger"
             class="project-img"
           />
           <div class="content-text">
@@ -102,14 +143,14 @@
               class="project-link"
               href="https://rjrt-web.github.io/burger/"
               target="_blank"
-              >Link</a
+              >Lien</a
             >
           </div>
         </div>
         <div class="content-image">
           <img
             src="images/headlines.jpeg"
-            alt="Project 2"
+            alt="Headlines"
             class="project-img"
           />
           <div class="content-text">
@@ -120,15 +161,14 @@
               class="project-link"
               href="https://rjrt-web.github.io/headlines/"
               target="_blank"
-              >Link</a
+              >Lien</a
             >
           </div>
         </div>
       </section>
       <section>
-        <h2>Contact Me</h2>
-        <div class="container">
-          <h1>FormSubmit Demo</h1>
+        <h2>Contact</h2>
+        <div class="container" id="contact">
           <form
             target="_blank"
             action="https://formsubmit.co/d4df8153c5ddae5aa482d4900f5a06fa"
@@ -137,32 +177,35 @@
             <div class="form-group">
               <div class="form-row">
                 <div class="col">
+                  <label for="name">Nom complet</label>
                   <input
                     type="text"
                     name="name"
                     class="form-control"
                     placeholder="Full Name"
-                    required
+                    required=""
                   />
                 </div>
                 <div class="col">
+                  <label for="email">Adresse courriel</label>
                   <input
                     type="email"
                     name="email"
                     class="form-control"
                     placeholder="Email Address"
-                    required
+                    required=""
                   />
                 </div>
               </div>
             </div>
             <div class="form-group">
+              <label for="message">Message</label>
               <textarea
                 placeholder="Your Message"
                 class="form-control"
                 name="message"
                 rows="10"
-                required
+                required=""
               ></textarea>
             </div>
             <input
@@ -172,15 +215,26 @@
             />
 
             <button type="submit" class="btn btn-lg btn-dark btn-block">
-              Submit Form
+              Envoyer
             </button>
           </form>
         </div>
       </section>
     </div>
 
-    <footer id="contact">
+    <footer>
       <h2>Contact</h2>
+      <i class="fa-brands fa-linkedin"></i>
+      <a
+        href="https://www.linkedin.com/in/ronald-junior-rivest-trudel/"
+        targer="_blank"
+      >
+        <i
+          class="fa-brands fa-linkedin"
+          style="font-size: 120px; color: #74c0fc"
+        ></i
+      ></a>
+      <i class="fas fa-clock" style="font-size: 120px; color: #2196f3"></i>
       <p>Email: ronaldjunior.rivesttrudel@hotmail.com</p>
       <p>© Copyright 2025 Ronald Junior Rivest-Trudel</p>
       <button id="back-to-top">⬆ Top</button>

@@ -4,8 +4,8 @@
 }
 
 body {
-  background: #f5f5f5;
-  color: #333;
+  background-color: rgb(143, 0, 0);
+  color: #f5f5f5;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -153,6 +153,9 @@ section {
 .skill-center {
   display: flex;
   justify-content: center;
+  background-color: #333;
+  padding: 15px;
+  border-radius: 15px;
 }
 
 .skill-center ul {
@@ -168,6 +171,10 @@ section {
   display: flex;
   flex-direction: row;
   align-items: center;
+  background-color: #333;
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 24px;
 }
 
 @media (max-width: 768px) {
@@ -181,6 +188,12 @@ section {
   width: 60%;
   text-align: center;
   padding: 24px 12px;
+}
+
+@media (max-width: 768px) {
+  .content-text {
+    width: 70%;
+  }
 }
 
 /* Profile Picture */
@@ -209,7 +222,6 @@ section {
   padding: 15px 25px;
   border-radius: 15px;
   text-decoration: none;
-  margin-bottom: 24px;
   transition: color 0.3s ease-in-out;
 }
 
@@ -227,10 +239,19 @@ section {
 .container {
   max-width: 400px;
   margin: auto;
-  background: white;
+  background: #333;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(22, 17, 17, 0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control {
+  width: -webkit-fill-available;
 }
 
 input,
@@ -249,10 +270,17 @@ button {
   border: none;
   border-radius: 15px;
   cursor: pointer;
+  margin-bottom: 0px;
+  align-items: center;
 }
 
 button:hover {
   background-color: #333;
+}
+
+.btn {
+  margin: 24px auto 0px;
+  padding: 15px;
 }
 
 /* Footer */
